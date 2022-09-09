@@ -1,10 +1,19 @@
 <html>
     <head>
         <script>
+            const callbacks = [];
+        
             function holler() {
-                alert("ok this is called")
-            }
-
+                alert("ok this is called");
+                callbacks.push(function() { alert("callback called") });
+                executeCallbacks();
+            };
+            
+            function executeCallbacks() {
+                callbacks.forEach((callback) => {
+                    callback();
+                });
+            };
         </script>
     </head>
     <body>
