@@ -1,10 +1,12 @@
+<!DOCTYPE html>
 <html>
+
     <head>
         <script>
             const callbacks = [];
         
             function alertAndCallbacks() {
-                alert("ok this is called");
+                alert("Trying to execute callbacks");
                 callbacks.push(function() { alert("callback called") });
                 executeCallbacks();
             };
@@ -16,7 +18,9 @@
             };
         </script>
     </head>
+    
     <body>
         <button type="button" onclick="alertAndCallbacks();">Click here</button>
     </body>
+    
 </html>
