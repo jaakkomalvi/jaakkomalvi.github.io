@@ -3,7 +3,7 @@
         <script>
             const callbacks = [];
         
-            function holler() {
+            function alertAndCallbacks() {
                 alert("ok this is called");
                 callbacks.push(function() { alert("callback called") });
                 executeCallbacks();
@@ -17,6 +17,6 @@
         </script>
     </head>
     <body>
-        <button type="button" onclick="holler(); androidCallback();">Click here</button>
+        <button type="button" onclick="alertAndCallbacks();">Click here</button>
     </body>
 </html>
