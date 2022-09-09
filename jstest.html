@@ -7,7 +7,6 @@
         
             function alertAndCallbacks() {
                 alert("Trying to execute callbacks");
-                callbacks.push(function() { alert("callback called") });
                 executeCallbacks();
             };
             
@@ -20,7 +19,7 @@
     </head>
     
     <body>
-        <button type="button" onclick="alertAndCallbacks();">Click here</button>
+        <button type="button" onclick="alertAndCallbacks();">Execute callbacks</button>
     </body>
     
 </html>
